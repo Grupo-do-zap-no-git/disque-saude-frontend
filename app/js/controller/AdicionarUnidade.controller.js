@@ -7,9 +7,9 @@
         var adicionarUnidadeCtrl = this;
         adicionarUnidadeCtrl.unidade;
 
-        adicionarUnidadeCtrl.adicionarUnidade = function getQueixa(nome,bairro,tipo) {
+        adicionarUnidadeCtrl.adicionarUnidade = function adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa) {
             console.log("AAAA");
-            UnidadeSaudeService.adicionarUnidade(nome,bairro,tipo)
+            UnidadeSaudeService.adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa)
             .then(function success(response) {
                 adicionarUnidade.unidade = response.data;
             }, function error() {
