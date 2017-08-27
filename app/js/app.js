@@ -106,6 +106,17 @@
                 }
             })
 
+            .state("vs.pesquisaEspecialidade", {
+                url: "/pesquisaEspecialidade",
+                views: {
+                    content: {
+                        templateUrl: 'view/pesquisaEspecialidade.html',
+                        controller: "PesquisaEspecialidadeCtrl as pesquisaEspecialidadeCtrl"
+                    }
+                }
+
+            })
+
 
             .state("vs.sucesso", {
                 url: "/sucesso/:id",
