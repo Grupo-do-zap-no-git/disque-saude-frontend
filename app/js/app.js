@@ -33,7 +33,7 @@
                 resolve: {
                     security: ['$q', function ($q) {
                         if (localStorage.getItem("ADMIN_LOGGED") === null) {
-                            return $q.reject("Not Authorized");
+                            return $q.reject("Administrador precisa está logado.");
                         }
                     }]
                 }
