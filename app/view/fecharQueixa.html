@@ -1,0 +1,67 @@
+<form class="form-horizontal">
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquise pelo ID." ng-model="queixaID">
+            <span class="input-group-btn">
+        <button class="btn btn-default"  type="submit" ng-click=" fechaQueixaCtrl.getQueixa(queixaID)">Pesquisar</button>
+      </span>
+        </div>
+    </div>
+    </div>
+</form>
+
+<div class="col-lg-12">
+    <div class="row" ng-if="fechaQueixaCtrl.queixa">
+        <div class="col-lg-12">
+            <h2 class="text-info">{{fechaQueixaCtrl.queixa.descricao}}</h2>
+            <p>Situação: <span class="badge">{{fechaQueixaCtrl.queixa.status}}</span></p>
+            <p>Comentario: {{fechaQueixaCtrl.queixa.comentario}} </p>
+            <p>Solicitante</p>
+            <ul class="list-group">
+                <li class="list-group-item"><b>Nome: </b> {{fechaQueixaCtrl.queixa.solicitante.nome}}</li>
+                <li class="list-group-item"><b>Email: </b> {{fechaQueixaCtrl.queixa.solicitante.email}}</li>
+                <li class="list-group-item"><b>Rua: </b> {{fechaQueixaCtrl.queixa.solicitante.rua}}</li>
+                <li class="list-group-item"><b>Cidade: </b> {{fechaQueixaCtrl.queixa.solicitante.cidade}}</li>
+                <li class="list-group-item"><b>UF: </b> {{fechaQueixaCtrl.queixa.solicitante.uf}}</li>
+            </ul>
+            <button ng-if="!fechaQueixaCtrl.queixa.comentario" type="button" data-toggle='modal' data-target='#modalInfo' class="btn btn-theme btn-block"><i class="fa fa-lock"></i> FECHAR QUEIXA</button>
+
+            <!--ModalInfo-->
+            <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class='header-info'>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <div>
+                                    <h3 id="myModalLabel"><strong>Fechar Queixa ID {{fechaQueixaCtrl.queixa.id}} </strong></h3>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body row">
+
+                            <div class="form-group">
+                                <label for="inputName" class="col-sm-2 col-form-label">Comentário:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" ng-model="comentario">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" ng-click="fechaQueixaCtrl.fecharQueixa(comentario)" data-toggle='modal' data-target='#modalInfo' class="btn btn-danger btn-block "><i class="fa fa-lock"></i> FECHAR QUEIXA</button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <hr>
+        </div>
+    </div>
+</div>

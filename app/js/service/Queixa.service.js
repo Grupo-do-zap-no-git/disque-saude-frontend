@@ -1,13 +1,14 @@
 'use strict';
 
-(function() {
+(function () {
 	var app = angular.module('vs');
 
 	app.service('QueixaService', function QueixaService($http, $q) {
 
 		var service = this;
 
-		var QUEIXA_URI = "http://localhost:5000/SpringBootRestApi/api/queixa/";
+		const QUEIXA_URI = "http://localhost:5000/SpringBootRestApi/api/queixa/";
+		const FECHAMENTO = "/fechamento/";
 
 		service.getQueixa = function getQueixa(id) {
 			var deffered = $q.defer();
@@ -28,5 +29,21 @@
 			});
 			return deffered.promise;
 		};
+
+		service.fecharQueixa = function fecharQueixa(queixa) {
+
+			var deffered = $q.defer();
+			$http.put(QUEIXA_URI + FECHAMENTO + queixa.id, JSON.stringify(queixa.comentario)).then(
+				function success(response) {
+					console.log(response);
+					deffered.resolve(response);
+				}, function error(response) {
+					console.log(response);
+					deffered.reject(response);
+				});
+			return deffered.promise;
+
+		}
+
 	});
 })();

@@ -67,3 +67,20 @@ body {
 .site-footer a {
     color: #fff;
 }
+
+.modal-header {
+	background: #69A2B0;
+    color: white;
+    text-align: center;
+}
+
+
+.modal-header h3 {
+    margin-top: 8px;
+}
+
+.modal-header p {
+    font-size: 10px;
+    margin: 0px;
+   
+}

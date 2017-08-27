@@ -32,14 +32,21 @@
 
             })
 
-
-
-
             .state("admin.home", {
                 url: "/home",
                 views: {
                     conteudo: {
                         templateUrl: 'view/testadmin.html'
+                    }
+                }
+            })
+
+            .state("admin.fecharQueixa", {
+                url: "/queixa/fechar",
+                views: {
+                    conteudo: {
+                        templateUrl: 'view/fecharQueixa.html',
+                        controller: "FechaQueixaController as fechaQueixaCtrl"
                     }
                 }
             })
