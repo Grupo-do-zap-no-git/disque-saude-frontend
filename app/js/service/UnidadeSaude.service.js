@@ -18,5 +18,23 @@
 			});
 			return deffered.promise;
 		};
+
+		service.adicionarUnidade = function adicionarUnidade(nome,bairro,tipo) {
+			var deffered = $q.defer();
+			var unidade = {
+				nome: nome,
+				bairro: bairro,
+				tipo: tipo
+			};
+			$http.post(UNIDADE_URI, JSON.stringify(unidade)).then(function success(response) {
+				deffered.resolve(response);
+			}, function error(response) {
+				deffered.reject(response);
+			});
+			return deffered.promise;
+		};
+
+
+
 	});
 })();

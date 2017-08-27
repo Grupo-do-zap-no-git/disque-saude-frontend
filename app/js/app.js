@@ -59,6 +59,16 @@
                 }
             })
 
+               .state("admin.adicionarUnidade", {
+                url: "/unidade/adicionar",
+                views: {
+                    conteudo: {
+                        templateUrl: 'view/adicionarUnidade.html',
+                        controller: "AdicionarUnidadeController as adicionarUnidadeCtrl"
+                    }
+                }
+            })
+
 
             .state("vs.home", {
                 url: "/",
@@ -113,6 +123,20 @@
                     }
                 }
             })
+
+
+            .state("vs.pesquisaEspecialidade", {
+                url: "/pesquisaEspecialidade",
+                views: {
+                    content: {
+                        templateUrl: 'view/pesquisaEspecialidade.html',
+                        controller: "PesquisaEspecialidadeCtrl as pesquisaEspecialidadeCtrl"
+                    }
+                }
+
+            })
+
+
 
             .state("vs.sucesso", {
                 url: "/sucesso/:id",
