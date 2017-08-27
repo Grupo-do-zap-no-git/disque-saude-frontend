@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="jumbotron">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control input-lg" id="complaint_id" ng-model="nomeUnidade" placeholder="Nome da unidade">
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control input-lg" id="complaint_id" ng-model="bairroUnidade" placeholder="Digite o bairro">
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control input-lg" id="complaint_id" ng-model="tipoUnidade" placeholder="Posto ou Hospital?">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-2 col-lg-offset-5 col-md-3 col-md-offset-5 col-sm-3 col-sm-offset-5 col-xs-3 col-xs-offset-5">
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="adicionarUnidadeCtrl.adicionarUnidade(nomeUnidade, bairroUnidade, tipoUnidade)">
+                        <i class="fa fa-search"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!--
+<div class="container">
+    <div class="row-fluid">
+        <div class="col-lg-12">
+            <div class="row" ng-if="pesquisaQueixaCtrl.queixa">
+                <div class="col-lg-12">
+                    <h2 class="text-info">{{pesquisaQueixaCtrl.queixa.descricao}}</h2>
+                    <p>Situação: <span class="badge">{{pesquisaQueixaCtrl.queixa.status}}</span></p>
+                    <p>Solicitante</p>
+                    <ul class="list-group">
+                        <li class="list-group-item"><b>Nome: </b> {{pesquisaQueixaCtrl.queixa.solicitante.nome}}</li>
+                        <li class="list-group-item"><b>Email: </b> {{pesquisaQueixaCtrl.queixa.solicitante.email}}</li>
+                        <li class="list-group-item"><b>Rua: </b> {{pesquisaQueixaCtrl.queixa.solicitante.rua}}</li>
+                        <li class="list-group-item"><b>Cidade: </b> {{pesquisaQueixaCtrl.queixa.solicitante.cidade}}</li>
+                        <li class="list-group-item"><b>UF: </b> {{pesquisaQueixaCtrl.queixa.solicitante.uf}}</li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
