@@ -14,9 +14,17 @@
             .state("vs", {
                 abstract: true,
                 templateUrl: "view/main.html",
-                controller: "MainController as mainCtrl"
+                controller: "MainController as mainCtrl",
+                resolve : {
+                    login: function(){
+                        //sempre torna a obrigatoriedade de logar caso saia da rota do admin
+                        //SEGURANÇA ++
+                        return localStorage.clear();
+                    }
+                }
 
             })
+
             .state("admin", {
                 abstract: true,
                 url: "/admin",
@@ -25,7 +33,7 @@
                 resolve: {
                     security: ['$q', function ($q) {
                         if (localStorage.getItem("ADMIN_LOGGED") === null) {
-                            return $q.reject("Not Authorized");
+                            return $q.reject("Administrador precisa está logado.");
                         }
                     }]
                 }
@@ -106,7 +114,6 @@
                 }
             })
 
-
             .state("vs.sucesso", {
                 url: "/sucesso/:id",
                 views: {
@@ -117,19 +124,12 @@
                 }
             })
 
-
             .state("login", {
                 url: '/login',
                 templateUrl: 'view/login.html',
                 controller: 'LoginController as loginCtrl'
             })
 
-            .state("nao-autorizado", {
-                url: '/unauthorized',
-                templateUrl: 'view/naoAutorizado.html'
-
-
-            });
 
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(false);
