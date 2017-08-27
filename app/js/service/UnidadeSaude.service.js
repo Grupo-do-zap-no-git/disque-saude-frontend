@@ -19,14 +19,16 @@
 			return deffered.promise;
 		};
 
-		service.adicionarUnidade = function adicionarUnidade(nome,bairro,tipo) {
+		service.adicionarUnidade = function adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa) {
 			var deffered = $q.defer();
 			var unidade = {
-				nome: nome,
+				especialidades: [{}],
 				bairro: bairro,
-				tipo: tipo
+				type: tipo,
+				atendentes: atendentes,
+				taxaDiariaAtendimentos: taxa
 			};
-			$http.post(UNIDADE_URI, JSON.stringify(unidade)).then(function success(response) {
+			$http.post(UNIDADE_URI+"incluirUnidade", JSON.stringify(unidade)).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {
 				deffered.reject(response);
