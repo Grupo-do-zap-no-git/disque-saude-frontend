@@ -7,9 +7,9 @@
 
 		var service = this;
 
-		var GERAL_URI = "https://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/api/unidade/";
+		var GERAL_URI = "http://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/api/unidade/";
 
-		const SITUACAO_URI = "https://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/api/queixa/situacao";
+		const SITUACAO_URI = "http://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/api/queixa/situacao";
 
 		service.getMediaMedico = function getMediaMedico(unidadeSaudeId) {
 			var deffered = $q.defer();

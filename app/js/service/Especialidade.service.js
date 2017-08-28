@@ -7,7 +7,7 @@
 
 		var service = this;
 
-		var ESPECIALIDADE_URI = "http://localhost:5000/SpringBootRestApi/especialidade/";
+		var ESPECIALIDADE_URI = "http://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/especialidade/";
 
 		service.unidadesComEspecialidade = function unidadesComEspecialidade(nome) {
 			var deffered = $q.defer();

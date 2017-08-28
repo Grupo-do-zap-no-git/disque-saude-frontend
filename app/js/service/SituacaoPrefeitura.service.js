@@ -7,7 +7,7 @@
 		
 		var self = this;
 
-		const SITUACAO_URI = "https://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/api/queixa/";
+		const SITUACAO_URI = "http://stormy-meadow-14912.herokuapp.com/SpringBootRestApi/api/queixa/";
 
 		self.mudarEstado = function(novoEstado) {
 			var deffered = $q.defer();
