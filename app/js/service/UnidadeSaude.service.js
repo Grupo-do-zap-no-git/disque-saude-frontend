@@ -19,6 +19,16 @@
 			return deffered.promise;
 		};
 
+		service.todasUnidades = function todasUnidades() {
+			var deffered = $q.defer();
+			$http.get(UNIDADE_URI + "todasAsUnidades").then(function success(response) {
+				deffered.resolve(response);
+			}, function error(response) {
+				deffered.reject(response);
+			});
+			return deffered.promise;
+		};
+
 		service.adicionarUnidade = function adicionarUnidade(unidade) {
 			var deffered = $q.defer();
 			$http.post(UNIDADE_URI+"incluirUnidade", JSON.stringify(unidade)).then(function success(response) {

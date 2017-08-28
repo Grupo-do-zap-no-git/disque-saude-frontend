@@ -12,7 +12,7 @@
             var unidade = criaUnidade(bairro, tipo, atendentes, taxa);
             UnidadeSaudeService.adicionarUnidade(unidade)
             .then(function success(response) {
-                adicionarUnidade.unidade = response.data;
+                adicionarUnidadeCtrl.unidade = response.data;
                 toastr.success('Adicionado com sucesso.');
             }, function error() {
                 adicionarUnidade.unidade = null;
@@ -23,7 +23,7 @@
         function criaUnidade(bairro, tipo, atendentes, taxa) {
             var unidade = {
                 bairro: bairro,
-                idsEspecialidades: [],
+                especialidades: [],
                 type: tipo,
                 atendentes: atendentes,
                 taxaDiariaAtendimentos: taxa
@@ -32,11 +32,10 @@
             if(adicionarUnidadeCtrl.especialidades) {
                 for (var i = 0; i < adicionarUnidadeCtrl.especialidades.length; i++) {
                     if(adicionarUnidadeCtrl.especialidades[i].selecionada) {
-                        unidade.idsEspecialidades.push(adicionarUnidadeCtrl.especialidades[i].id);
+                        unidade.especialidades.push(adicionarUnidadeCtrl.especialidades[i].nome);
                     }
                 }
             }
-            console.log(unidade);
             return unidade;
         }
 
