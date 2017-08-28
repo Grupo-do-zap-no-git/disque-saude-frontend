@@ -7,7 +7,7 @@
 		
 		var self = this;
 
-		const SITUACAO_URI = "http://localhost:5000/SpringBootRestApi/api/queixa/";
+		const SITUACAO_URI = "https://secret-fjord-22556.herokuapp.com/SpringBootRestApi/api/queixa/";
 
 		self.mudarEstado = function(novoEstado) {
 			var deffered = $q.defer();
