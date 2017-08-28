@@ -15,8 +15,8 @@
                 abstract: true,
                 templateUrl: "view/main.html",
                 controller: "MainController as mainCtrl",
-                resolve : {
-                    login: function(){
+                resolve: {
+                    login: function () {
                         //sempre torna a obrigatoriedade de logar caso saia da rota do admin
                         //SEGURANÇA ++
                         return localStorage.clear();
@@ -59,12 +59,22 @@
                 }
             })
 
-               .state("admin.adicionarUnidade", {
+            .state("admin.adicionarUnidade", {
                 url: "/unidade/adicionar",
                 views: {
                     conteudo: {
                         templateUrl: 'view/adicionarUnidade.html',
                         controller: "AdicionarUnidadeController as adicionarUnidadeCtrl"
+                    }
+                }
+            })
+
+            .state("admin.modificaPrefeitura", {
+                url: "/prefeitura/status", 
+                views: {
+                    conteudo: {
+                        templateUrl: 'view/mudaSituacaoPrefeitura.html', 
+                        controller: "SituacaoPrefeituraController as situacaoPrefeituraCtrl"
                     }
                 }
             })

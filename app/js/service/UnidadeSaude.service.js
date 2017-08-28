@@ -21,6 +21,7 @@
 
 		service.adicionarUnidade = function adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa) {
 			var deffered = $q.defer();
+
 			var unidade = {
 				especialidades: [{}],
 				bairro: bairro,
@@ -28,6 +29,7 @@
 				atendentes: atendentes,
 				taxaDiariaAtendimentos: taxa
 			};
+
 			$http.post(UNIDADE_URI+"incluirUnidade", JSON.stringify(unidade)).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {
@@ -35,8 +37,6 @@
 			});
 			return deffered.promise;
 		};
-
-
-
 	});
+	
 })();
