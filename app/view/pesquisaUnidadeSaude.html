@@ -26,8 +26,10 @@
                         <p>Número de medicos: {{unidade.atendentes}}</p>
                         <p>Número de pacientes por dia: {{unidade.taxaDiariaAtendimentos}}</p>
                         <p>Especialidades da unidade de saúde:
+                            <br/>
                             <span class="badge badge-default" ng-repeat="especialidade in unidade.especialidades">
-                                <b>{{especialidade.descricao}}</b>
+                                <b> - {{especialidade}}</b>
+                                <br/>
                             </span>
                         </p>
                     </div>
