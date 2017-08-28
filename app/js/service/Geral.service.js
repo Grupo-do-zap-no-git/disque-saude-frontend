@@ -7,13 +7,14 @@
 
 		var service = this;
 
-		var GERAL_URI = "http://localhost:5000/SpringBootRestApi/api/geral/";
+		var GERAL_URI = "http://localhost:5000/SpringBootRestApi/api/unidade/";
 
 		service.getMediaMedico = function getMediaMedico(unidadeSaudeId) {
 			var deffered = $q.defer();
 			$http.get(GERAL_URI + "medicos/" + unidadeSaudeId).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {
+				console.log("AAQUI");
 				deffered.reject(response);
 			});
 			return deffered.promise;
