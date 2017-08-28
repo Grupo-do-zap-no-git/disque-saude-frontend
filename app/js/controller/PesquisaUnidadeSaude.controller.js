@@ -10,8 +10,8 @@
         pesquisaUnidadeSaudeCtrl.pesquisaUnidadeSaude = function pesquisaUnidadeSaude(bairro) {
             UnidadeSaudeService.pesquisaUnidadeSaude(bairro)
                 .then(function success(response) {
-                    pesquisaUnidadeSaudeCtrl.unidades = [];
-                    pesquisaUnidadeSaudeCtrl.unidades.push(response.data);
+                    pesquisaUnidadeSaudeCtrl.unidades = response.data;
+                    console.log(pesquisaUnidadeSaudeCtrl.unidades)
                 }, function error() {
                     toastr.error("Erro na busca de unidades");
                 });
