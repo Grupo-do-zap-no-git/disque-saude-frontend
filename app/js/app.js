@@ -15,8 +15,8 @@
                 abstract: true,
                 templateUrl: "view/main.html",
                 controller: "MainController as mainCtrl",
-                resolve : {
-                    login: function(){
+                resolve: {
+                    login: function () {
                         //sempre torna a obrigatoriedade de logar caso saia da rota do admin
                         //SEGURANÇA ++
                         return localStorage.clear();
@@ -71,6 +71,15 @@
                     }
                 }
             })
+            .state("admin.modificaPrefeitura", {
+                url: "/prefeitura/status", 
+                views: {
+                    conteudo: {
+                        templateUrl: 'view/mudaSituacaoPrefeitura.html', 
+                        controller: "SituacaoPrefeituraController as situacaoPrefeituraCtrl"
+                    }
+                }
+            })
             .state("vs.home", {
                 url: "/",
                 views: {
@@ -106,10 +115,10 @@
                     }
                 }
             })
-            .state("vs.situacaoQueixas", {
-                url: "/situacaoQueixas",
+            .state("admin.situacaoQueixas", {
+                url: "/prefeitura/situacaoQueixas",
                 views: {
-                    content: {
+                    conteudo: {
                         templateUrl: 'view/situacaoQueixas.html',
                         controller: "SituacaoQueixasCtrl as situacaoQueixasCtrl"
                     }

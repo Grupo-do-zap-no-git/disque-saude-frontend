@@ -1,0 +1,17 @@
+<div class="col-md-12">
+
+    <div class="dropdown col-md-12 col-sm-12">
+        <button class="btn btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="true">
+    {{situacaoPrefeituraCtrl.situacaoPrefeitura}}
+    <span class="caret"></span>
+  </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><md-button ng-click="situacaoPrefeituraCtrl.mudarEstado('Extra')">EXTRA</button></li>
+            <li><md-button ng-click="situacaoPrefeituraCtrl.mudarEstado('Normal')">NORMAL</button></li>
+            <li><md-button ng-click="situacaoPrefeituraCtrl.mudarEstado('Caos')">CAOS</button></li>
+
+        </ul>
+    </div>
+
+</div>
