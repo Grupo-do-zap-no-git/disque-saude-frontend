@@ -19,6 +19,16 @@
 			return deffered.promise;
 		};
 
+		service.todasEspecialidades = function todasEspecialidades() {
+			var deffered = $q.defer();
+			$http.get(ESPECIALIDADE_URI + 'todas').then(function success(response) {
+				deffered.resolve(response);
+			}, function error(response) {
+				deffered.reject(response);
+			});
+			return deffered.promise;
+		};
+
 		service.adicionar = function adicionar(especialidade) {
 			var deffered = $q.defer();
 			$http.post(ESPECIALIDADE_URI, especialidade).then(function success(response) {
