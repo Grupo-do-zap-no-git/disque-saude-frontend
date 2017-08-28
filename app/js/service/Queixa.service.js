@@ -7,7 +7,7 @@
 
 		var service = this;
 
-		const QUEIXA_URI = "http://localhost:5000/SpringBootRestApi/api/queixa/";
+		const QUEIXA_URI = "http://secret-fjord-22556.herokuapp.com/SpringBootRestApi/api/queixa/";
 		const FECHAMENTO = "/fechamento/";
 
 		service.getQueixa = function getQueixa(id) {

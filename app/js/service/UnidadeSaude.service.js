@@ -7,7 +7,7 @@
 
 		var service = this;
 
-		var UNIDADE_URI =  "http://localhost:5000/SpringBootRestApi/api/unidade/";
+		var UNIDADE_URI =  "http://secret-fjord-22556.herokuapp.com/SpringBootRestApi/api/unidade/";
 
 		service.pesquisaUnidadeSaude = function pesquisaUnidadeSaude(bairro) {
 			var deffered = $q.defer();

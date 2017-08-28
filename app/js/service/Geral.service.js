@@ -7,9 +7,9 @@
 
 		var service = this;
 
-		var GERAL_URI = "http://localhost:5000/SpringBootRestApi/api/unidade/";
+		var GERAL_URI = "http://secret-fjord-22556.herokuapp.com/SpringBootRestApi/api/unidade/";
 
-		const SITUACAO_URI = "http://localhost:5000/SpringBootRestApi/api/queixa/situacao";
+		const SITUACAO_URI = "http://secret-fjord-22556.herokuapp.com/SpringBootRestApi/api/queixa/situacao";
 
 		service.getMediaMedico = function getMediaMedico(unidadeSaudeId) {
 			var deffered = $q.defer();
