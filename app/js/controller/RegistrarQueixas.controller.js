@@ -1,11 +1,10 @@
 'use strict';
-var registraQueixaCtrl;
 (function() {
     var app = angular.module('vs');
 
     app.controller("RegistraQueixaCtrl", function RegistraQueixaCtrl(toastr, $state, QueixaService) {
 
-        registraQueixaCtrl = this;
+        var registraQueixaCtrl = this;
 
         registraQueixaCtrl.tipoSelecionado = 'ANIMAL';
         registraQueixaCtrl.animal = '';
