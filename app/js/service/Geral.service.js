@@ -9,6 +9,8 @@
 
 		var GERAL_URI = "http://localhost:5000/SpringBootRestApi/api/unidade/";
 
+		const SITUACAO_URI = "http://localhost:5000/SpringBootRestApi/api/queixa/situacao";
+
 		service.getMediaMedico = function getMediaMedico(unidadeSaudeId) {
 			var deffered = $q.defer();
 			$http.get(GERAL_URI + "medicos/" + unidadeSaudeId).then(function success(response) {
@@ -22,7 +24,7 @@
 
 		service.getSituacaoQueixas = function getSituacaoQueixas() {
 			var deffered = $q.defer();
-			$http.get(GERAL_URI + "situacao").then(function success(response) {
+			$http.get(SITUACAO_URI).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {
 				deffered.reject(response);
