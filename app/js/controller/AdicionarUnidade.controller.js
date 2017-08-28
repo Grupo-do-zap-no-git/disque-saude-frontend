@@ -8,7 +8,6 @@
         adicionarUnidadeCtrl.unidade;
 
         adicionarUnidadeCtrl.adicionarUnidade = function adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa) {
-            console.log("AAAA");
             UnidadeSaudeService.adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa)
             .then(function success(response) {
                 adicionarUnidade.unidade = response.data;
