@@ -16,8 +16,5 @@
                 toastr.error(error);
             });
         }
-    
-	   
 	});
-
 })();

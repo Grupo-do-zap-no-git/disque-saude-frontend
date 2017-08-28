@@ -22,9 +22,7 @@
                         return localStorage.clear();
                     }
                 }
-
             })
-
             .state("admin", {
                 abstract: true,
                 url: "/admin",
@@ -37,9 +35,7 @@
                         }
                     }]
                 }
-
             })
-
             .state("admin.home", {
                 url: "/home",
                 views: {
@@ -48,7 +44,6 @@
                     }
                 }
             })
-
             .state("admin.fecharQueixa", {
                 url: "/queixa/fechar",
                 views: {
@@ -58,8 +53,7 @@
                     }
                 }
             })
-
-               .state("admin.adicionarUnidade", {
+            .state("admin.adicionarUnidade", {
                 url: "/unidade/adicionar",
                 views: {
                     conteudo: {
@@ -68,8 +62,15 @@
                     }
                 }
             })
-
-
+            .state("admin.adicionarEspecialidade", {
+                url: "/especialidade/adicionar",
+                views: {
+                    conteudo: {
+                        templateUrl: 'view/adicionarEspecialidade.html',
+                        controller: "AdicionarEspecialidadeController as adicionarEspecialidadeCtrl"
+                    }
+                }
+            })
             .state("vs.home", {
                 url: "/",
                 views: {
@@ -123,8 +124,6 @@
                     }
                 }
             })
-
-
             .state("vs.pesquisaEspecialidade", {
                 url: "/pesquisaEspecialidade",
                 views: {
@@ -133,11 +132,7 @@
                         controller: "PesquisaEspecialidadeCtrl as pesquisaEspecialidadeCtrl"
                     }
                 }
-
             })
-
-
-
             .state("vs.sucesso", {
                 url: "/sucesso/:id",
                 views: {
@@ -147,19 +142,16 @@
                     }
                 }
             })
-
             .state("login", {
                 url: '/login',
                 templateUrl: 'view/login.html',
                 controller: 'LoginController as loginCtrl'
             })
 
-
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(false);
 
     })
-
 
     app.run(['$rootScope', '$state', function ($rootScope, $state) {
 
@@ -167,9 +159,6 @@
             console.log(error);
             $state.go("login");
         })
-
-
-
     }]);
 
 })();
