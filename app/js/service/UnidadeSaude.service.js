@@ -19,17 +19,8 @@
 			return deffered.promise;
 		};
 
-		service.adicionarUnidade = function adicionarUnidade(bairro, tipo,especialidades,atendentes,taxa) {
+		service.adicionarUnidade = function adicionarUnidade(unidade) {
 			var deffered = $q.defer();
-
-			var unidade = {
-				especialidades: [{}],
-				bairro: bairro,
-				type: tipo,
-				atendentes: atendentes,
-				taxaDiariaAtendimentos: taxa
-			};
-
 			$http.post(UNIDADE_URI+"incluirUnidade", JSON.stringify(unidade)).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {

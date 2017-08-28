@@ -11,6 +11,7 @@
 	    		nome: nomeEspecialidade,
 	    		descricao: descricaoEspecialidade
 	    	}
+	    	console.log(especialidade)
 	        EspecialidadeService.adicionar(especialidade).then(function success(response) {
 	        	toastr.success("Especialidade adicionada com sucesso.");
 	        }, function error() {

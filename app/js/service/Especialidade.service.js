@@ -7,7 +7,7 @@
 
 		var service = this;
 
-		var ESPECIALIDADE_URI = "http://localhost:5000/SpringBootRestApi/api/especialidade/";
+		var ESPECIALIDADE_URI = "http://localhost:5000/SpringBootRestApi/especialidade/";
 
 		service.unidadesComEspecialidade = function unidadesComEspecialidade(nome) {
 			var deffered = $q.defer();
@@ -31,7 +31,7 @@
 
 		service.adicionar = function adicionar(especialidade) {
 			var deffered = $q.defer();
-			$http.post(ESPECIALIDADE_URI, especialidade).then(function success(response) {
+			$http.post(ESPECIALIDADE_URI + 'insere', especialidade).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {
 				deffered.reject(response);
