@@ -20,11 +20,11 @@
             <ul class="list-group">
                 <div class="list-group-item row" ng-repeat="unidade in pesquisaUnidadeSaudeCtrl.unidades">
                     <div class="col-lg-12">
-                        <h2 class="text-info">Unidade do Bairro: {{pesquisaUnidadeSaudeCtrl.unidade.descricao}}</h2>
-                        <p>Código: {{pesquisaUnidadeSaudeCtrl.unidade.codigo}}</p>
-                        <p>Tipo: {{pesquisaUnidadeSaudeCtrl.unidade.type}}</p>
-                        <p>Número de medicos: {{pesquisaUnidadeSaudeCtrl.unidade.numeroMedicos}}</p>
-                        <p>Número de pacientes por dia: {{pesquisaUnidadeSaudeCtrl.unidade.numeroPacientesDia}}</p>
+                        <h2 class="text-info">Unidade do Bairro: {{unidade.bairro}}</h2>
+                        <p>Código: {{unidade.id}}</p>
+                        <p>Tipo: {{unidade.type}}</p>
+                        <p>Número de medicos: {{unidade.atendentes}}</p>
+                        <p>Número de pacientes por dia: {{unidade.taxaDiariaAtendimentos}}</p>
                         <p>Especialidades da unidade de saúde:
                             <span class="badge badge-default" ng-repeat="especialidade in unidade.especialidades">
                                 <b>{{especialidade.descricao}}</b>

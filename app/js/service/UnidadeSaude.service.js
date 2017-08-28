@@ -11,7 +11,7 @@
 
 		service.pesquisaUnidadeSaude = function pesquisaUnidadeSaude(bairro) {
 			var deffered = $q.defer();
-			$http.get(UNIDADE_URI + "busca?bairro=" + bairro).then(function success(response) {
+			$http.get(UNIDADE_URI + "buscaPorBairro/" + bairro).then(function success(response) {
 				deffered.resolve(response);
 			}, function error(response) {
 				deffered.reject(response);

@@ -23,6 +23,9 @@
                 <div class="col-lg-12">
                     <h2 class="text-info">{{pesquisaQueixaCtrl.queixa.descricao}}</h2>
                     <p>Situação: <span class="badge">{{pesquisaQueixaCtrl.queixa.status}}</span></p>
+                    <p>Tipo de Queixa: <span class="badge">{{pesquisaQueixaCtrl.queixa.tipoDeQueixa}}</span></p>
+                    <p ng-if="pesquisaQueixaCtrl.queixa.tipoDeQueixa==='ANIMAL'">Tipo de Animal: <b>{{pesquisaQueixaCtrl.queixa.tipoAnimal}} </b></p>
+                    <p ng-if="pesquisaQueixaCtrl.queixa.tipoDeQueixa==='ANIMAL'">Local: <b>{{pesquisaQueixaCtrl.queixa.local}}</b></p>
                     <p>Solicitante</p>
                     <ul class="list-group">
                         <li class="list-group-item"><b>Nome: </b> {{pesquisaQueixaCtrl.queixa.solicitante.nome}}</li>

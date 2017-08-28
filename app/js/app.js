@@ -106,10 +106,10 @@
                     }
                 }
             })
-            .state("vs.pesquisaMediaMedico", {
+            .state("admin.pesquisaMediaMedico", {
                 url: "/pesquisaMediaMedico",
                 views: {
-                    content: {
+                    conteudo: {
                         templateUrl: 'view/pesquisaMediaMedico.html',
                         controller: "PesquisaMediaMedicoCtrl as pesquisaMediaMedicoCtrl"
                     }
