@@ -115,10 +115,10 @@
                     }
                 }
             })
-            .state("vs.situacaoQueixas", {
-                url: "/situacaoQueixas",
+            .state("admin.situacaoQueixas", {
+                url: "/prefeitura/situacaoQueixas",
                 views: {
-                    content: {
+                    conteudo: {
                         templateUrl: 'view/situacaoQueixas.html',
                         controller: "SituacaoQueixasCtrl as situacaoQueixasCtrl"
                     }
